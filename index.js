@@ -9,8 +9,9 @@ async function run() {
     const octokit = github.getOctokit(myToken)
 
     const owner = os.environ["GITHUB_OWNER"];
-    const repo_name = os.environ["GITHUB_REPOSITORY"];
-    console.log(owner)
+    // const repo_name = os.environ["GITHUB_REPOSITORY"];
+    const repo_name = "yaml2gantt";
+    core.log(owner)
     const {data: test} = await octokit.issues.get(
       {
         owner,
