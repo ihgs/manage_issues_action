@@ -15,7 +15,7 @@ async function run() {
     const myToken = core.getInput('myToken');
     const octokit = github.getOctokit(myToken)
 
-    const owner = os.environ["GITHUB_OWNER"];
+    const owner = process.env.GITHUB_OWNER;
     // const repo_name = os.environ["GITHUB_REPOSITORY"];
     const repo_name = "yaml2gantt";
     core.log(owner)
