@@ -16,8 +16,7 @@ async function run() {
     const octokit = github.getOctokit(myToken)
 
     const owner = process.env.GITHUB_OWNER;
-    // const repo = process.env.GITHUB_REPOSITORY;
-    const repo = "yaml2gantt";
+    const repo = process.env.GITHUB_REPOSITORY;
     core.info(owner)
     const {data: test} = await octokit.search.issuesAndPullRequests(
       {
