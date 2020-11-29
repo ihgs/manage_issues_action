@@ -19,7 +19,7 @@ async function run() {
     // const repo_name = os.environ["GITHUB_REPOSITORY"];
     const repo = "yaml2gantt";
     core.info(owner)
-    const {data: test} = await octokit.search.issues(
+    const {data: test} = await octokit.search.issuesAndPullRequests(
       {
         q: `repo:${owner}/${repo} is:open`
       }
